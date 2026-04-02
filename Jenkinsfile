@@ -17,7 +17,7 @@ node {
     stage('Deploy to EC2') {
         echo 'Deploying to EC2...'
         sh """
-            sudo mdir -p ${appDir}
+            sudo mkdir -p ${appDir}
             sudo chown -R jenkins:jenkins ${appDir}
 
             rsync -av --delete --exclude='.git' --exclude='node_modules' ./ ${appDir}/
