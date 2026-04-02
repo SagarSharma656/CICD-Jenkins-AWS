@@ -22,6 +22,7 @@ node {
 
             rsync -av --delete --exclude='.git' --exclude='node_modules' ./ ${appDir}/
 
+
             cd ${appDir}
             sudo npm install
             sudo npm run build
